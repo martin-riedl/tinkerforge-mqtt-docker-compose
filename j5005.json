@@ -1,0 +1,20 @@
+{
+   "tinkerforge/j5005/register/temperature_ir_bricklet/9nN/object_temperature" : {
+      "register" : true
+   },
+   "tinkerforge/j5005/request/temperature_ir_bricklet/9nN/set_object_temperature_callback_period" : {
+      "period" : 5000
+   },
+   "tinkerforge/j5005/register/humidity_bricklet/HB/humidity" : {
+      "register" : true
+   },
+   "tinkerforge/j5005/request/humidity_bricklet/HB/set_humidity_callback_period" : {
+      "period" : 5000
+   },
+   "tinkerforge/j5005/register/temperature_bricklet/bP3/temperature": {
+     "register" : true
+   },
+   "tinkerforge/j5005/request/temperature_bricklet/bP3/set_temperature_callback_period" : {
+      "period" : 2000
+   }
+}

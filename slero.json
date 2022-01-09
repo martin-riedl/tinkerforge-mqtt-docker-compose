@@ -1,0 +1,29 @@
+{
+   "tinkerforge/slero/register/motion_detector_bricklet/whG/motion_detected" : {
+      "register" : true
+   },
+   "tinkerforge/slero/callback/motion_detector_bricklet/whG/motion_detected" : {
+      "period" : 2000
+   },
+
+   "tinkerforge/slero/register/temperature_bricklet/zrP/temperature": {
+     "register" : true
+   },
+   "tinkerforge/slero/request/temperature_bricklet/zrP/set_temperature_callback_period" : {
+      "period" : 2000
+   },
+
+   "tinkerforge/slero/register/ambient_light_v2_bricklet/yhu/illuminance" : {
+      "register" : true
+   },
+   "tinkerforge/slero/request/ambient_light_v2_bricklet/yhu/set_illuminance_callback_period" : {
+      "period" : 5000
+   },
+
+   "tinkerforge/slero/register/barometer_bricklet/d8Q/air_pressure" : {
+      "register" : true
+   },
+   "tinkerforge/slero/request/barometer_bricklet/d8Q/set_air_pressure_callback_period" : {
+      "period" : 5000
+   }
+}

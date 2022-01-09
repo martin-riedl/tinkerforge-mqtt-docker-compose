@@ -1,0 +1,33 @@
+version: '3'
+services:
+  mosquitto:
+    # image: icebear8/mosquitto:2.0.14-r2
+    image: icebear8/mosquitto:stable
+    restart: always
+    ports:
+    - "1884:1883"
+    environment:
+      # - SERVICE_ARGS=-v
+      - SERVICE_ARGS=
+
+  tinkerforge_j5005:
+    # image: icebear8/tinkerforge:2.0.15-r1
+    image: icebear8/tinkerforge:stable
+    restart: always
+    volumes:
+      - type: bind
+        source: ./j5005.json
+        target: /opt/tinkermqtt/init.json
+    environment:
+      - SERVICE_ARGS=--ipcon-host 192.168.0.5 --ipcon-port 4220 --broker-host mosquitto --init-file init.json --global-topic-prefix tinkerforge/j5005/
+
+  tinkerforge_slero:
+    # image: icebear8/tinkerforge:2.0.15-r1
+    image: icebear8/tinkerforge:stable
+    restart: always
+    volumes:
+      - type: bind
+        source: ./slero.json
+        target: /opt/tinkermqtt/init.json
+    environment:
+      - SERVICE_ARGS=--ipcon-host 192.168.0.9 --ipcon-port 4219 --broker-host mosquitto --init-file init.json --global-topic-prefix tinkerforge/slero/
